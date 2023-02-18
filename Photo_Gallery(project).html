@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1{
+        margin: 0;
+    padding-left: 400px;
+    display: inline-block;
+    text-align: center;
+      }
+      body{
+        background-image: linear-gradient(to top, #171212, #78dcf8);
+        background-size: cover;
+       background-position: center;
+     background-repeat: no-repeat;
+     height: 100vh;
+         overflow: hidden;
+      }
+        img{
+            width:500px;
+            height:450px;
+        }
+      .slider {
+        display: flex;
+        overflow-x: scroll;
+        white-space: nowrap;
+        position: relative;
+        padding-top:0%;
+        padding-left:27px;
+        padding-right:20px;
+        border:4px solid blue;
+        
+      }
+      .slider img {
+        width: 150px;
+        height: 80px;
+        margin-right: 5px;
+        border:5px solid rgb(31, 242, 12);
+        cursor: pointer;
+      }
+
+      .display-img {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 120%;
+        max-height: 50%;
+        display: none;
+        z-index: 1;
+        border:5px solid rgb(8, 8, 8);
+      }
+      marquee{
+        margin: 0;
+    padding: 0;
+    display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><i><b>Photo Gallery</b></i></h1>
+    <marquee behavior="alternate" scrollamount:"1"> <h5> Click on Desired Image to Display</h5></marquee>
+    <div class="slider">
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img15.jfif">
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img13.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img12.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img20.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img2.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img1.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img14.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img11.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img7.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img18.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img16.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img4.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img19.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img6.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img17.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img8.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img3.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img10.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img9.jfif"/>
+      <img src="C:\Users\Administrator\Documents\bharath_project(2)\img5.jfif"/>
+    </div>
+    <div class="box">
+    <img class="display-img" src="" />
+  </div>
+  
+    <script>
+      const slider = document.querySelector('.slider');
+      const images = document.querySelectorAll('.slider img');
+      const prevArrow = document.querySelector('.pre');
+      const nextArrow = document.querySelector('.next');
+      const displayImg = document.querySelector('.display-img');
+
+      images.forEach(img => {
+        img.addEventListener('click', () => {
+          displayImg.src = img.src;
+          displayImg.style.display = "block";
+        });
+      });
+      displayImg.addEventListener('click', () => {
+        displayImg.style.display = "none";
+      });
+      prevArrow.addEventListener('click', () => {
+        slider.scrollLeft -= slider.offsetWidth;
+      });
+      nextArrow.addEventListener('click', () => {
+        slider.scrollLeft += slider.offsetWidth;
+      });
+    </script>
+  </body>
+</html>
