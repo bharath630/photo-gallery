@@ -7,9 +7,17 @@
   </head>
   <body>
     <h1><i><b>Photo Gallery</b></i></h1>
-    <marquee behavior="alternate" scrollamount:"1"> <h3> Click on Desired Image to Display</h3></marquee>
-    <div class="slider">
-      <img src="Images\img15.jfif">
+    <marquee behavior="scroll" scrollamount:"1"> <h3> Click on Desired Image to Display Then Click on Displayed image to come back</h3></marquee>
+    
+  <script src="script.js"></script>
+  <div class="both">
+  <div class="add">
+      <input type="file" id="imageInput" multiple>
+      
+  </div>
+  </div>
+  <div class="slider">
+        <img id ="imageGallery" src="Images\img13.jfif">
       <img src="Images\img13.jfif"/>
       <img src="Images\img12.jfif"/>
       <img src="Images\img20.jfif"/>
@@ -31,8 +39,6 @@
       <img src="Images\img5.jfif"/>
     </div>
     <div class="arrow">
-    <div class="pre"></div>
-    <div class="next"></div>
     </div>
     <div class="box">
     <img class="display-img" src="" />
