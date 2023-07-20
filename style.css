@@ -93,7 +93,8 @@
   .slider img {
     width: 120px;
     height: 70px;
-    margin-right: 5px;
+    margin-right: 0px;
+    margin-left:12px;
     border: 5px solid rgb(31, 242, 12);
     cursor: pointer;
     background-size: contain;
