@@ -22,7 +22,6 @@
 }
 @media (min-width: 481px) {
   h1 {
-    font-size: 48px;
     color: #181212;
     text-shadow: 0 0 10px #fff;
     animation: shine 2s infinite;
@@ -80,7 +79,7 @@
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-gap: 5px;
     white-space: nowrap;
     position: relative;
     padding-top: 0%;
@@ -94,13 +93,14 @@
     width: 120px;
     height: 70px;
     margin-right: 0px;
-    margin-left:12px;
     border: 5px solid rgb(31, 242, 12);
     cursor: pointer;
+    padding-right: 0px;
+    margin-left: 15px;
     background-size: contain;
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 482px) {
   .slider img {
     width: 150px;
     height: 80px;
@@ -113,11 +113,11 @@
 @media (min-width: 481px) and (max-width: 1600px) {
   .display-img {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 200%;
-    max-height: 150%;
+    max-width: 100%;
+    max-height: 80%;
     background-image: linear-gradient(to top, #272020, #a4d4e1);
     z-index: 1;
     display: none;
@@ -128,7 +128,7 @@
 @media (max-width: 480px) {
   .display-img {
     position: fixed;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 90%;
@@ -137,8 +137,8 @@
     display: none;
     border: 5px solid rgb(53, 212, 236);
     cursor: pointer;
-    padding: 0px;
-    margin: 0px;
+
+    background-color: green;
   }
 }
 
@@ -150,4 +150,37 @@ marquee {
 
 .add {
   height: 20px;
+}
+@media (min-width: 481px) {
+  #fact {
+    font-size: 30px;
+    background-color: rgb(107, 131, 84);
+    color: yellow;
+    margin-top: 0px;
+    margin-left: 60px;
+    padding-left: 80px;
+    border: 2px solid rgb(9, 255, 9);
+    top: 70%;
+    position: sticky;
+    left: 50%;
+    bottom: 0;
+    display: hidden;
+  }
+}
+@media (max-width: 480px) {
+  #fact {
+    width: 300px;
+
+    background-color: #ebf30c;
+    color: rgb(37, 25, 25);
+    font-size: 18px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    margin-bottom: 20px;
+
+    display: hidden;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+  }
 }
